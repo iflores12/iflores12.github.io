@@ -69,6 +69,18 @@ body {
 	text-decoration: line-through;
 }
 
+#home p:link,
+#home p:visited,
+#home p:active {
+	font-family:'Poppins', sans-serif;
+	color: rgb(206, 108, 209);
+}
+
+#home p:hover {
+	text-decoration: line-through;
+	color: rgb(206, 108, 209);
+}
+
 #work_wrapper {
 	width:100%;
 	height: auto;
@@ -144,6 +156,11 @@ body {
 	/*	border: 1px solid #fff;*/
 	z-index: 2;
 	line-height: 0.80em;
+}
+
+.work h3 {
+	font-family:'Poppins', sans-serif;
+	color: rgb(206, 108, 209);
 }
 
 #contact {
@@ -278,5 +295,3 @@ and (max-device-width : 700px) {
 	
 	
 }
-
-/* END Smartphone */
