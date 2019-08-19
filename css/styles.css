@@ -1,0 +1,282 @@
+@font-face {
+	font-family: 'Poppins', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Poppins:700&display=swap');
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Poppins', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Poppins:700&display=swap');
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+
+
+html {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+	color: #000;
+	cursor: pointer !important;
+}
+
+a:hover {
+	cursor: pointer !important;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	-webkit-font-smoothing: antialiased;
+	position:relative;
+	height: auto;
+}
+
+#home {
+	font-family: 'Poppins', sans-serif;
+	font-size: 208px;
+	line-height: 0.88em;
+	padding: 80px 85px 0 85px;
+	width: calc(100% - 170px);
+	height: auto;
+	background-color: #fff;
+	z-index: 5;
+	position: relative;
+	letter-spacing: -0.02em;
+}
+
+#home a:link,
+#home a:visited,
+#home a:active {
+	font-family:'Poppins', sans-serif;
+	color: rgb(206, 108, 209);
+}
+
+#home a:hover {
+	text-decoration: line-through;
+}
+
+#work_wrapper {
+	width:100%;
+	height: auto;
+	position: relative;
+	margin:0;
+	padding:0;
+}
+
+.credit {
+	position: absolute;
+	top: 245px;
+	left: -85px;
+	font-family:'Poppins', sans-serif;
+	font-size: 20px;
+	letter-spacing: 0.03em;
+	z-index: 999999;
+	width: 380px;
+	height: 20px;
+	text-align: right;
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+}
+
+#logo {
+	position: fixed;
+	top: 60px;
+	right: 80px;
+	font-family:'Poppins', sans-serif;
+	font-size: 20px;
+	letter-spacing: 0.03em;
+	z-index: 2;
+	width: 380px;
+	height: 20px;
+	text-align: right;
+}
+
+.work {
+	position: relative;
+	padding: 0px;
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.work img {
+	height: auto;
+	max-height: calc(100% - 280px);
+	position: absolute;
+	top:0;
+	left: -14%;
+	right:0;
+	bottom: 0;
+	margin: auto;
+	display: block;
+	z-index: 1;
+}
+
+.work h1,
+.work h2 {
+	font-family:'Poppins', sans-serif;
+	color: rgb(206, 108, 209);
+	position: absolute;
+	width: 100%;
+	margin: 0;
+	padding:0;
+	bottom: 45px;
+	right: 90px;
+	display: block;
+	text-align: right;
+	letter-spacing: -0.03em;
+	/*	border: 1px solid #fff;*/
+	z-index: 2;
+	line-height: 0.80em;
+}
+
+#contact {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 80px 0 0 0;
+	width: 100%;
+	height: auto;
+	z-index: 5;
+	position: relative;
+	background-color: #222;
+	overflow: hidden;
+}
+
+#contact h1 {
+	font-family:'Poppins', sans-serif;
+	line-height: 0.88em;
+	font-size: 200px;
+	display: block;
+	text-align: left;
+	Left: 80px;
+	bottom: -65px;
+	width: calc(100% - 80px);
+	position: absolute;
+	letter-spacing: -0.02em;
+	color: #fff;
+	/*	border: 1px solid #fff;*/
+	z-index: 2;
+}
+
+#contact a:link,
+#contact a:visited,
+#contact a:active {
+	font-family:'Poppins', sans-serif !important;
+	color: rgb(206, 108, 209);
+}
+
+#contact a:hover {
+	text-decoration: line-through;
+}
+
+#contact h1 a:hover {
+	text-decoration: line-through;
+}
+
+#contact img {
+	position: absolute;
+	height: auto;
+	max-height: calc(100% - 170px);
+	left: 85px;
+	bottom: 80px;
+	display: block;
+	z-index: 1;
+}
+
+#work_details {
+	font-family: 'Poppins', sans-serif;
+	font-size: 50px;
+	line-height: 1.2em;
+	width: calc(100% - 160px);
+	padding: 0 80px;
+	height: auto;
+	background-color: #fff;
+	z-index: 5;
+	position: relative;
+	letter-spacing: -0.01em;
+	margin-top: 60px;
+}
+
+
+#work_details a:link,
+#work_details a:visited,
+#work_details a:active {
+	color: #777;
+}
+
+#work_details a:hover {
+	text-decoration:line-through;
+}
+
+#work_details img {
+	display: block;
+	width: auto;
+	max-width:100%;
+	min-width:100%;
+	max-height: none;
+	position: relative;
+	margin: 70px 0 0 0;
+	padding:0;
+	left: auto;
+}
+
+/* Smartphone */
+@media only screen 
+and (min-device-width : 0px) 
+and (max-device-width : 700px) {
+	
+	
+.work h1,
+.work h2 {
+	position: relative;
+	font-size: 30px !important;
+	width: 100%;
+	margin: 0;
+	padding:0;
+	bottom: auto;
+	right: auto;
+	text-align: left;
+	z-index: 2;
+	line-height: 0.80em;
+	letter-spacing: normal;
+}	
+	
+.credit {
+	position: relative;
+	top: auto;
+	left: auto;
+	font-size: 20px;
+	letter-spacing: 0.03em;
+	z-index: 999999;
+	width: auto;
+	height: auto;
+	text-align: right;
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+}
+	
+	
+}
+
+/* END Smartphone */
