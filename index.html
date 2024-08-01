@@ -1,57 +1,65 @@
-
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Hello</title>
-<meta name="description" content="personal website">
 
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
-<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello</title>
+	<meta name="description" content="personal website">
+
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
 
 </head>
 
 <body>
-<div id="home">
-	my name is isaac. i am an engineer <a href="#work_wrapper" class="scroll">working</a> at the democratic data exchange. <a href="#contact" class="scroll">contact</a> me.<br>or check my work out:
-</div>
+	<div id="home">
+		my name is isaac. i am an engineer <a href="#work_wrapper" class="scroll">working</a> at the democratic data
+		exchange. <a href="#contact" class="scroll">contact</a> me.<br>or check my work out:
+	</div>
 
-<div id="work_wrapper">
-	
-    <div id="logo">
-    	<a href="#home" class="scroll">isaac</a>
-    </div>
-    
-    <div class="work" id="tidy_data">
-        <a href="tidy_data.html"><h2>tidy data</h2></a>
-        <a href="tidy_data.html"><img src="images/arboretum.JPG"></a>
-    </div>
-    
-    <div class="work" id="oldworld">
-        <a href="https://github.com/iflores12/civic"><h2>civic</h2></a>
-        <a href="https://github.com/iflores12/civic"><img src="images/gerbs.JPG"></a>
-    </div>
-	
+	<div id="work_wrapper">
+
+		<div id="logo">
+			<a href="#home" class="scroll">isaac</a>
+		</div>
+
+		<div class="work" id="tidy_data">
+			<a href="tidy_data.html">
+				<h2>tidy data</h2>
+			</a>
+			<a href="tidy_data.html"><img src="https://flores-huerta.com/images/arboretum.JPG"></a>
+		</div>
+
+		<div class="work" id="oldworld">
+			<a href="https://github.com/iflores12/telera">
+				<h2>telera</h2>
+			</a>
+			<a href="https://github.com/iflores12/telera"><img src="https://flores-huerta.com/images/gerbs.JPG"></a>
+		</div>
 
 
-</div>
 
-<div id="contact">
-	<h1>
-    	you can contact me via <a href="mailto:isaac@flores-huerta.com?subject=hello">mail</a> or <a href="https://www.linkedin.com/in/isaacfloreshuerta/" target="_blank">linkedin</a> or <a href="https://twitter.com/isaac_fh" target="_blank">twitter</a>.
-    </h1>
-</div>
+	</div>
 
-<script src="js/jquery.fittext.js"></script>
-<script type="text/javascript">
-	$("#home").fitText(0.765, { minFontSize: '140px', maxFontSize: '350px' });
-	$(".work h1").fitText(0.62, { minFontSize: '30px', maxFontSize: '500px' });
-	$(".work h2").fitText(0.45 , { minFontSize: '30px', maxFontSize: '500px' });
-	$("#contact h1").fitText(0.80, { minFontSize: '140px', maxFontSize: '350px' });
-	$("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
-</script>
+	<div id="contact">
+		<h1>
+			you can contact me via <a href="mailto:isaac@flores-huerta.com?subject=hello">mail</a> or <a
+				href="https://www.linkedin.com/in/isaacfloreshuerta/" target="_blank">linkedin</a> or <a
+				href="https://twitter.com/isaac_fh" target="_blank">twitter</a>.
+		</h1>
+	</div>
+
+	<script src="js/jquery.fittext.js"></script>
+	<script type="text/javascript">
+		$("#home").fitText(0.765, {minFontSize: '140px', maxFontSize: '350px'});
+		$(".work h1").fitText(0.62, {minFontSize: '30px', maxFontSize: '500px'});
+		$(".work h2").fitText(0.45, {minFontSize: '30px', maxFontSize: '500px'});
+		$("#contact h1").fitText(0.80, {minFontSize: '140px', maxFontSize: '350px'});
+		$("#fittext3").fitText(1.1, {minFontSize: '50px', maxFontSize: '75px'});
+	</script>
 </body>
+
 </html>
