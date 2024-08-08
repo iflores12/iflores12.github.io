@@ -1,0 +1,15 @@
+{%- include head.html -%}
+
+<body>
+    {%- include header.html -%}
+            <div id="logo">
+                <a href="#" class="scroll">digital morsels</a>
+            </div>
+    <main class="page_content" aria-label="Content">
+        {{ content | markdownify }}
+    </main>
+    {%- include footer.html -%}
+</body>
+<script src="https://isaac.flores-huerta.com/js/jquery.fittext.js"></script>
+
+</html>
