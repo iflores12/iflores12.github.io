@@ -2,8 +2,24 @@
 
 <body>
     {%- include header.html -%}
-            <div id="logo">
-                <a href="#" class="scroll">digital morsels</a>
+    <style>
+        #blog {
+            position: fixed;
+            top: 10px;
+            /* Adjust as needed */
+            right: 30px;
+            /* Adjust as needed */
+            z-index: 1000;
+            font-size: 28px;
+            font-family: 'Poppins', sans-serif !important;
+            /* Ensure it stays on top */
+        }
+        #blog a:hover {
+            text-decoration: line-through;
+        }
+    </style>
+            <div id="blog">
+                <a href="#">digital morsels</a>
             </div>
     <main class="page_content" aria-label="Content">
         {{ content | markdownify }}
