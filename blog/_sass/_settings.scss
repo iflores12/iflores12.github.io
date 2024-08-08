@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'");
+
+:root {
+    // Variable for the light mode
+    --bg-color: #f2f2f2; // Background color
+    --font-serif: "Poppins", sans-serif; // Serif font
+    --font-color: #222; // Font color
+    --font-size: 22px; // Font size
+    --text-width: 35em; // Width of the area where the content of the pages and posts are displayed
+    --text-font: var(--font-serif); // Default font for the text
+    --line-height: calc(var(--font-size) * 2); // Line height
+    --custom-color: #CCDDD3; // Complementary color, for the lines and underlinings
+    --lines: linear-gradient(to top,
+            var(--custom-color) 50%,
+            rgba(255, 255, 255, 0) 50%); // Lines
+    --quote-color: #EEEAE7; // Background-color for quotes
+}
+
+.typo-plus-checkbox:checked~.theme-container .typo-plus-label::before {
+    content: var(--typo-moins-label); // If you want to change the displayed text to change mode, change it in the :root section of this file
+}
+
+/* Typo-dys */
+.typo-dys-label::before {
+    content: var(--sans-serif-label); // If you want to change the displayed text to change mode, change it in the :root section of this file
+    font-size: calc(var(--font-size) / 1.5); // Size font of the displayed text to switch between serif and sans-serif
+    font-family: var(--font-sansserif);
+}
+
+.typo-dys-checkbox:checked~.theme-container .typo-dys-label::before {
+    content: var(--serif-label); // If you want to change the displayed text to change mode, change it in the :root section of this file
+    font-family: var(--font-serif);
+}
+
+#typo-dys:checked,
+#typo-dys:checked~.theme-container {
+    --text-font: var(--font-sansserif);
+}

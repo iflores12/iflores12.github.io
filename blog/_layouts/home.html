@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article>
+    {% assign posts = site.posts %}
+    {% assign posts_limit = site.home-posts-limit %}
+    {% if posts.size > 0 %}
+    <div class="apercu-post" role="list">
+        {% for post in posts limit: posts_limit %}
+        <section>
+            <a href="{{ post.url | relative_url }}" role="listitem">
+                <div id="title">
+                    <h1 class="list_post_title">
+                        <span>{{ post.title | escape }}</span>
+                    </h1>
+                </div>
+            </a>
+            {% assign authors = post.category | join: ", " %}
+            <h2 class="list_post_info">{{ post.date | date_to_long_string }}</h2>
+        </section>
+        <div class="line"></div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</article>
