@@ -23,7 +23,7 @@ email: isaac@flores-huerta.com
 description: >- # this means to ignore newlines until "baseurl:"
   Morsels On Our Digital Lives
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "isaac.flores-huerta.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://isaac.flores-huerta.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: isaac_fh
 github_username: iflores12
 home-posts-limit: 10
