@@ -28,7 +28,7 @@ twitter_username: isaac_fh
 github_username: iflores12
 home-posts-limit: 10
 # Build settings
-# theme: minima
+theme: minima
 plugins:
   - jekyll-feed
 
