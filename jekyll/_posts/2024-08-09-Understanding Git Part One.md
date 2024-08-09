@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Understanding Git Part One"
+title: "Understanding Git: Part One"
 date: 2020-08-09 17:00:00 -0400
 categories: personal
 ---
@@ -58,7 +58,8 @@ Use the following command to check the status of the files in your repo: `git st
 
 Once you have new files or modified files you'll want to use the command `git add `
 
-> [!NOTE] Note
+> ✏️ Note
+>
 > Git saves the state of your file as it was when you ran git add. So if you go back and modify the file after the fact you'll see that the file is staged and unstaged. If you were to commit the previous version of the file (the state when you first added it) would be the state that gets committed. Remember to add files again if you modify them so that they become staged.
 >
 
@@ -80,7 +81,8 @@ To view all the unstaged changes you've made you can use the command `git diff`.
 If you want to skip the staging area you can do so by running `git commit -a`. This will both add your changes and commit them.
 
 
-> [!NOTE]
+> ✏️ Note
+>
 > Unlike many other VCSs, Git doesn’t explicitly track file movement. If you rename a file in Git, no metadata is stored in Git that tells it you renamed the file. However, Git is pretty smart about figuring that out after the fact — we’ll deal with detecting file movement a bit later.
 
 To actually move a file in git you'll have to run `git mv file new_file_location`
@@ -115,7 +117,8 @@ If you accidentally added files to the staging area after doing a blanket `git a
 
 If you want to unmodify a modified file because you realize that the changes you made don't make sense then you can easily unmodify it. You can revert it back to what it looked like in it's last commit. To do so run `git restore <file>`. This will work if you have not staged the file. If you have staged then first restore it from the staging area and then restore the file again. This will revert all your changes.
 
-> [!NOTE] WARNING
+> ⚠️ WARNING:
+>
 > It’s important to understand that `git checkout -- <file>` is a dangerous command. Any local changes you made to that file are gone — Git just replaced that file with the last staged or committed version. Don’t ever use this command unless you absolutely know that you don’t want those unsaved local changes.
 
 ### Remote
