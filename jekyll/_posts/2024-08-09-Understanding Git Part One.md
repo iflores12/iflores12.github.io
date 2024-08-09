@@ -5,10 +5,10 @@ date: 2020-08-09 17:00:00 -0400
 categories: personal
 ---
 
-I use git for work every day. While I have a certain workflow down and am able to use it for various tasks at work I feel like I don't really know it. I wanted to take a deep dive into git and really understand the tool that is an integral part of my daily workflow. This is me reading the [pro git book](https://git-scm.com/book/en/v2) and taking notes so you don't have to. This is part one in the series.
+I use git for work every day. While I have a certain workflow down and am able to use it for various tasks at work, I don't know the internals. I wanted to take a deep dive into git and understand the tool that is an integral part of my daily workflow. This is me reading the [pro git book](https://git-scm.com/book/en/v2) and taking notes so you don't have to. This is part one of the series.
 # Intro
 
-**Version Control:** Think of google sheets where you can rewind time. You can recall specific versions of the sheet and see who made edits. In this context though it's the set of files in your code base
+**Version Control:** Think of Google Sheets where you can rewind time. You can recall specific versions of the sheet and see who made edits. In this context though it's the set of files in your codebase
 * Git is a distributed version control system. Where essentially each computer has an entire backup of the code. The clients have a full mirror of the repository as opposed to just the latest snapshot of files.
 
 ## What is Git
@@ -25,7 +25,7 @@ Because it's distributed Git only needs local files to operate. You also don't n
 > The basic Git workflow goes something like this:
 > 1. You modify files in your working tree.
 > 2. You selectively stage just those changes you want to be part of your next commit, which adds _only_ those changes to the staging area.
-> 3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+> 3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently in your Git directory.
 
 # Getting Started
 
@@ -35,7 +35,7 @@ Because it's distributed Git only needs local files to operate. You also don't n
 
 Option #1
 * Once you're inside the directory that you want to be in run `git init`
-	* creates a subdirectory called .git that will contain all the git related files
+	* creates a subdirectory called .git that will contain all the git-related files
 * If it's a new directory and there's no files. Go ahead and write some files
 	* add those files with `git add .`
 		* this adds all files from the directory you're in downwards
@@ -46,7 +46,7 @@ Option #1
 Option #2
 * `git clone [URL]`
 	* this will create a directory and initialize a .git directory
-	* it will also pull down the data/files from the url
+	* it will also pull down the data/files from the URL
 
 ## Basic Commands
 
@@ -59,10 +59,10 @@ Use the following command to check the status of the files in your repo: `git st
 Once you have new files or modified files you'll want to use the command `git add `
 
 > [!NOTE] Note
-> Git saves the state of your file as it was when you ran git add. So if you go back and modify the file after the fact you'll see that the file is staged and unstaged. If you were to commit the previous version of the file (the state of it when you first added it) would be the state that gets committed. Remember to add files again if you modified them so that they become staged.
+> Git saves the state of your file as it was when you ran git add. So if you go back and modify the file after the fact you'll see that the file is staged and unstaged. If you were to commit the previous version of the file (the state when you first added it) would be the state that gets committed. Remember to add files again if you modify them so that they become staged.
 >
 
-Git tracks every new file and modification. But sometimes you don't want that because you'll have a build process that you don't want tracked. Or files with sensitive information that you don't want tracked. Or log files. To deal with those files you can create a file called `.gitignore`. Here you can add file patterns that you want git to ignore.
+Git tracks every new file and modification. But sometimes you don't want that because you'll have a build process that you don't want tracked. Or files with sensitive information that you don't want to be tracked. Or log files. To deal with those files you can create a file called `.gitignore`. Here you can add file patterns that you want git to ignore.
 ```
 # ignore doc/notes.txt, but not doc/server/arch.txt
 doc/*.txt
@@ -90,7 +90,7 @@ To actually move a file in git you'll have to run `git mv file new_file_location
 
 To view your commit history run `git log`
 * You'll see output that has a commit, author, and date, with the commit message.
-* By default it will be ordered in reverse chronological order
+* By default, it will be ordered in reverse chronological order
 	* most recent commits are first
 * Use `-p` to show the diff of each commit
 * Use `--stat` to print out how many files were changed within a commit as well as how many lines were added and removed
@@ -105,24 +105,24 @@ To view your commit history run `git log`
 
 At some point while writing code and modifying files you will mess up and commit code that you did not want to commit. You have to be extra careful here because not everything can be undone and sometimes you can even corrupt your files and commit history if you're not paying attention.
 
-If you commit to early and you forget to add some files, mess up the commit message, want to redo the commit, or make additional changes then you'll use the command `git commit --ammend`
+If you commit too early and you forget to add some files, mess up the commit message, want to redo the commit or make additional changes then you'll use the command `git commit --amend`
 
-This will take your staging area and uses it for the commit. If nothing has changed then the only thing that happens is that the commit message changes.
+This will take your staging area and use it for the commit. If nothing has changed then the only thing that happens is that the commit message changes.
 
 ### Unstaging
 
 If you accidentally added files to the staging area after doing a blanket `git add *` and you want to remove the file from it you can run the command `git restore --staged <file>`. Git will actually show you this command when you do `git status` if you ever forget.
 
-If you want to unmodify a modified file because you realize that the changes you made don't make sense then you can easily unmodify it. You can revert it back to what it looked like in it's last commit. To do so run `git restore <file>`. This will work if you have not staged the file. If you have staged the follow first restore it from the staging area and then restore the file again. This will revert all your changes.
+If you want to unmodify a modified file because you realize that the changes you made don't make sense then you can easily unmodify it. You can revert it back to what it looked like in it's last commit. To do so run `git restore <file>`. This will work if you have not staged the file. If you have staged then first restore it from the staging area and then restore the file again. This will revert all your changes.
 
 > [!NOTE] WARNING
 > It’s important to understand that `git checkout -- <file>` is a dangerous command. Any local changes you made to that file are gone — Git just replaced that file with the last staged or committed version. Don’t ever use this command unless you absolutely know that you don’t want those unsaved local changes.
 
 ### Remote
 
-When you work collaboratively with others you'll need to manage a remote repo. These are repos that are hosted on the a network somewhere or a website like Github. This means that you'll have to be constantly pulling data and pushing data to the remote repos. You'll have to manage remotes and branches that no longer exist or new branches that you make locally.
+When you work collaboratively with others you'll need to manage a remote repo. These are repos that are hosted on the network somewhere or on a website like Github. This means that you'll have to be constantly pulling data and pushing data to the remote repos. You'll have to manage remotes and branches that no longer exist or new branches that you make locally.
 
-To view what remote servers you have configured just run the command `git remote`. This will list all the remote servers you have. For the most part you should just see `origin`. If you add the `-v` flag it will show you the url.
+To view what remote servers you have configured just run the command `git remote`. This will list all the remote servers you have. For the most part, you should just see `origin`. If you add the `-v` flag it will show you the url.
 
 To get data from a remote repo you can use the command `get fetch`. This will pull down all the data from the remote project that you don't have in your local repo. You can also use `git pull` to both fetch new data from the remote repo and merge that remote into your current branch.
 
@@ -137,4 +137,4 @@ $ git config --global alias.ci commit
 $ git config --global alias.st status
 ```
 
-Here are some common aliases that you might want to set up. These are related to cli aliases if you're familiar with those. If not it basically means a shortcut that represents a longer/complex command. So using the above aliases instead of saying `git commit` you just have to type out `git ci`.
+Here are some common aliases that you might want to set up. These are related to cli aliases if you're familiar with them. If not it basically means a shortcut that represents a longer/complex command. So using the above aliases instead of saying `git commit` you just have to type out `git ci`.
