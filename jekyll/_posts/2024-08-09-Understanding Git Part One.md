@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Understanding Git: Part One"
-date: 2020-08-09 17:00:00 -0400
-categories: personal
+date: 2024-08-09 17:00:00 -0400
+categories: git
 ---
 
 I use git for work every day. While I have a certain workflow down and am able to use it for various tasks at work, I don't know the internals. I wanted to take a deep dive into git and understand the tool that is an integral part of my daily workflow. This is me reading the [pro git book](https://git-scm.com/book/en/v2) and taking notes so you don't have to. This is part one of the series.
