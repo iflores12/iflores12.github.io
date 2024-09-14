@@ -39,8 +39,8 @@ body {
 	margin: 0;
 	text-align: left;
 	-webkit-font-smoothing: antialiased;
-	overflow-x: hidden
-	position:relative;
+	overflow-x: hidden;
+	position: relative;
 	height: auto;
 }
 
